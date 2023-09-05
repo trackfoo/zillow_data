@@ -2,7 +2,7 @@
 zillow_data retreives single family home data for listings via Scrapeak infrastructure, and posts files to Google Cloud Storage.  It seperately checks **for sale** and **sold** homes based on zillow search URLs, and pulls marquee home details including: Bedrooms; Bathrooms; Geo locations; Historical event details; and photos.  Additional chat bot and data visualization tools are available.
 
 ## Why
- I wanted to build a process which automatically gathered, stored, displayed and analyzed home sales / home availability data.  This would involve building and scheduling python scripts, storing data on cloud resources (Google Cloud Storage), utilizing AI tools (OpenAI API) as well as data vizualization programs (Looker Studio).    
+ I wanted to build a process which automatically gathered, stored, displayed and analyzed home sales / home availability data.  This would involve building and scheduling python scripts, storing data on cloud resources (Google Cloud Storage), utilizing AI tools (PandasAI) as well as data vizualization programs (Looker Studio).    
 
 ## How It Works
 ### _Zillow Data Pull_
