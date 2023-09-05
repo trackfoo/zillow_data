@@ -19,7 +19,7 @@ zillow_data retreives single family home data for listings via Scrapeak infrastr
    * The Home_Details, Raw_Events, and Photos files have combined data from the seperate **for sale** and **sold** listings.  
 
 ### _Chat Bot_
-1. Utilizing LangChain, ChainLit and OpenAI infrastructure, a chat bot was developed in order to communicate with the csv data file.
+1. Utilizing PandasAI and Streamlit infrastructure, a chat bot was developed in order to communicate with the csv file.
 
 ## Getting Started
 
@@ -37,7 +37,7 @@ zillow_data retreives single family home data for listings via Scrapeak infrastr
 ### _Chat Bot_
 1. Initiate the chat bot (locally).
 ```
-chainlit run chatbot.py
+streamlit run chatbot.py
 ```
 2. Upload the _csv_files/dashboard_data_final.csv_ file to leverage the chat bot and ask questions about your data / document.
 
@@ -46,15 +46,13 @@ chainlit run chatbot.py
 * Scrapeak API Key
 * OpenAI API Key
 * Google Cloud Project, Bucket and Service Account Credentials
-* **Libraries:** langchain, pandas, requests, time, os, google.cloud, urllib, chainlit, shutil
+* **Libraries:** pandas, requests, time, os, google.cloud, urllib, streamlit, shutil, pandasai, dotenv
 
 
 ## Roadmap / Feature Improvements
 * **Batched API requests:**  Scrapeak is looking to add the feature to their APIs.  This should improve performance by limiting API requests and subsequently stay within price plan limitations, especially when a large set of listings are created (1,000+).
 * **Implement Cloud Scheduler:** Currently the jobs are run locally.  Will want to migrate so auto refreshes are reliably executed and completed.
 * **Tableau Dashboard:**  Currently the data is displayed within a Looker Studio Dashboard.  Will want to load data and visualize within Tableau as well.
-* **Implement Pandas within Chat Bot:** Currently the chat bot does not leverage statistical python packages (pandas) for more detailed and pointed data analysis.
-* **Improve Chat Usability / Functionality:** Improvements are required in labeling as well as displaying sources.
 * **Improve zillowId failure handling:**  If there's a failure in grabing details for a specific zillowId, there's no mechanism in re-attempting the data grab.
 
 ## Data Dictionary
@@ -109,3 +107,6 @@ File contains all historical events per zillowId.
 
 * 0.1 [09/01/2023]
   * Initial release
+* 0.2 [09/05/2023]
+  * Implemented Streamlit chat bot
+  * Updated documentation accordingly 
